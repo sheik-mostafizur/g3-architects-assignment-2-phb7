@@ -280,9 +280,6 @@ main > section {
 }
 
 /* review_client */
-.review_client {
-  overflow: hidden;
-}
 .review_client .review__items {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -305,6 +302,21 @@ main > section {
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
+  transition: transform .3s;
+}
+.review__item .person .person_img:hover {
+  transform: scale(1.5);
+}
+.review__item .person_info h3 {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 0.5rem;
+}
+.review__item .person_info h6 {
+  font-size: 1rem;
+  color: var(--dark);
 }
 .review__item .description {
   padding: 1rem;
@@ -321,6 +333,12 @@ footer {
 
 /* responsive area */
 
+@media only screen and (max-width: 965px) {
+  nav {
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   nav {
     justify-content: center;
@@ -333,6 +351,10 @@ footer {
   }
   .features .year {
     margin: 0 auto -12rem auto;
+  }
+  .review_client .review__items {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
   }
 }
 
